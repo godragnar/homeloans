@@ -1,0 +1,41 @@
+<div>
+    <div class="panel-heading">
+        <h2 style="color: #0fb9b4;">Users List</h2>
+      </div>
+
+      <div>
+        <table class="table table-striped">
+            <thead>
+              <tr>
+                <th>Id</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Date of Birth</th>
+                <th>Files</th>
+                <th>Actions</th>
+              
+              </tr>
+            </thead>
+
+            <tbody>
+                <tr *ngFor="let u of users">
+                  <td>{{ u.id }}</td>
+                  <td>{{ u.firstName }}</td>
+                  <td>{{ u.lastName}}</td>
+                  <td>{{ u.dob}}</td>
+                  <td>{{ u.documents}}</td>
+                  
+                 
+                  <td *ngFor="let d of loanAmount ">{{ u.loanAmount }}</td>
+              
+          
+              
+                </tr>
+              
+              </tbody>
+
+        </table>
+      </div>
+      <button (click)="adminLogout()" style="background-color: #0fb9b4;" class="btn btn-success">Logout</button>
+        
+</div>

@@ -1,0 +1,30 @@
+h2{
+    font-weight: bolder;
+    font-style: italic;
+  }
+  h1{
+    font-weight: lighter;
+    font-style: oblique;
+  }
+  ul{
+    font-style: italic;
+    border-radius: 0%;
+  }
+  p{
+    font-style: italic;
+  }
+Container holding the image and the text 
+  .container {
+    position: relative;
+    text-align: center;
+    color: white;
+  }
+  
+  
+   Centered text 
+  .centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }

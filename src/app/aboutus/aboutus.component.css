@@ -1,0 +1,19 @@
+h1{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: skyblue;
+    text-align: center;
+   }
+ h4{
+   font-size: xx-large;
+   font-family: 'Courier New', Courier, monospace;
+   font-weight: bolder;
+   border: 0vw;
+  
+ }
+ h2{
+   font-weight:bold;
+ }
+ ul{
+   font-style: normal;
+   margin-top: auto;
+  }

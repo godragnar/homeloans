@@ -1,0 +1,116 @@
+<div class="root">
+    <h1>Income Details</h1>
+    <div class="col-md-6 offset-md-3">
+    <body>
+        <br>
+        <br>
+    <p>Property Location:
+        <input type="text"  name="propertyLocation" [(ngModel)]="details.propertyLocation"  />
+    </p>
+    <p>Property Name:
+        <input type="text"  name="propertyName" [(ngModel)]="details.propertyName"  />
+    </p>
+    <p>Estimated Amount:
+        <input type="text" name="estimatedAmount" [(ngModel)]="details.estimatedAmount" />
+    </p>
+    <tr>
+        <td colspan="7" style="padding-left:300px">
+      
+      <br>
+      <br>
+      <h3>{{msg1}}</h3>
+      </td>
+    </tr>
+</body>
+
+</div>
+</div>
+
+<br>
+<br>
+
+<div class="root">
+    <div class="col-md-6 offset-md-3">
+    <body>
+        <br>
+        <br>
+    <p>Type of Employment:
+        <input type="radio" value="salaried" name="employmentType" [(ngModel)]="details.employmentType" size="30"
+            required>Salaried
+            <input type="radio" value="selfEmployed" name="employmentType" [(ngModel)]="details.employmentType" size="30"
+            required>Self Employed
+    </p>
+    <p>Retirement age:
+        <input type="text" maxlength="2" name="age" [(ngModel)]="details.age" pattern="\d{2}" />
+    </p>
+    <p>Organization Type:
+        <input type="text" name="OrganizationType" [(ngModel)]="details.OrganizationType" />
+    </p>
+    <p>Employer Name:
+        <input type="text" name="employerName" [(ngModel)]="details.employerName" />
+    </p>
+    <tr>
+        <td colspan="7" style="padding-left:300px">
+    
+      <h3>{{msg2}}</h3>
+      </td>
+    </tr>
+</body>
+</div>
+</div>
+
+<br>
+
+<hr style="color: red">
+
+
+<div class="root">
+    <h1>Loan Details</h1>
+    <div class="col-md-6 offset-md-3">
+    <body>
+        <br>
+        <br>
+  
+    <p>Interest Rate:
+        <select name="interestRate" [(ngModel)]="details.interestRate" tabindex="2" >
+            <option selected>8.5</option>
+        </select>
+    </p>
+    <p>Tenure:
+        <select name="tenure" [(ngModel)]="details.tenure" tabindex="1">
+            <option>5</option>
+            <option>6</option>
+            <option>7</option>
+            <option>8</option>
+            <option>9</option>
+            <option>10</option>
+            <option>11</option>
+            <option>12</option>
+            <option>13</option>
+            <option>14</option>
+            <option>15</option>
+        </select>
+        
+    </p>
+    <p>Loan Amount:
+        <input type="text" name="loanAmount" [(ngModel)]="details.loanAmount" maxlength="8" pattern="\d{8}"/>
+    </p>
+    <tr>
+        <td colspan="7" style="padding-left:300px">
+      <button class="btn btn-warning" type="submit" (click)="clickEvent3()">Submit</button>
+      <br>
+      <br>
+      <h3>{{msg3}}</h3>
+      </td>
+    </tr>
+    <a align="center" class="btn btn-link" (click)="next()"><strong>Next</strong></a>
+
+    <br>
+
+    
+
+</body>
+</div>
+<br>
+<br>
+</div>

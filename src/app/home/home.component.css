@@ -1,0 +1,40 @@
+
+
+h3 {
+		color: darkorange;
+	
+}
+
+button{
+	text-align: center;
+	height: 50px;
+	width: 150px;
+	color:whitesmoke;
+	cursor: pointer;
+	background-color: skyblue;
+	border: 1px solid ;
+	border-radius: 20px;
+
+}
+
+ button:hover{
+	background: orange;
+}
+
+*{
+	box-sizing:border-box;
+  }
+  
+  .column {
+	float: left;
+	width: 33.33%;
+	padding: 10px;
+  }
+  
+  /* Clearfix (clear floats) */
+  .row::after {
+	content: "";
+	clear: both;
+	display: table;
+  }
+
