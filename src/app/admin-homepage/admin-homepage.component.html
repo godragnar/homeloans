@@ -26,8 +26,11 @@
                   <td>{{ u.documents}}</td>
                   
                  
-                  <td *ngFor="let d of loanAmount ">{{ u.loanAmount }}</td>
-              
+                 
+                 <td *ngFor="let d of loanAmount ">{{ d.loanAmount }}</td>
+                <td><button [disabled] = "u.accept" (click)="updateuser(u.id)" class="btn btn-success">Accept</button>
+                  </td>
+
           
               
                 </tr>
