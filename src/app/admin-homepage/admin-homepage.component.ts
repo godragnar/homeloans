@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
 
-import { AdminServiceService } from '../admin-service.service';
 import { UserServiceService } from '../user-service.service';
 import { User } from '../user';
 import { AuthenticationService } from '../authentication.service';
@@ -14,9 +13,9 @@ import { AuthenticationService } from '../authentication.service';
 })
 export class AdminHomepageComponent implements OnInit {
 
- 
+ users:any;
   loanAmount: any;
-  users:Observable<User[]> | any;
+ 
 
   constructor(
     private router:Router,
@@ -36,12 +35,7 @@ export class AdminHomepageComponent implements OnInit {
       debugger
       this.users= res;
     });
-   
-
-    
- 
-    
-  }
+   }
   loan(){
 
     this.loanAmount=[];
@@ -51,7 +45,31 @@ export class AdminHomepageComponent implements OnInit {
       this.loanAmount=res;
     });
   }
- 
+ userDocuments(id: number){
+    this.router.navigate(['', id]);
+  }
+
+  deleteuser(id: any) {
+    this.userservice.deleteuser(id)
+      .subscribe(
+        data => {
+          console.log(data);
+          this.reloadData();
+        },
+        error => console.log(error));
+  }
+
+  updateuser(id:any){
+    this.userservice.updateuser(id).subscribe(r=>{
+      
+    });
+    this.users = [];
+    
+    this.userservice.findallusers().subscribe(res=>{
+      debugger
+      this.users= res;
+    });
+  }
  
   adminLogout() {
 
