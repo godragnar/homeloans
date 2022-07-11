@@ -11,7 +11,7 @@ export class LoanTrackerComponent implements OnInit {
   public user:any = null;
   public message:any = '';
   public email: any = null;
-  public dob:any=null;
+
   constructor(private router:Router,
     private userService:UserServiceService) { }
 
